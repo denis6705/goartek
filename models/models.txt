@@ -1,0 +1,23 @@
+В этот раз нужно хорошо продумать модели и их поля.
+
+Во первых нужна хорошая модель юзера.
+
+User {
+  first_name  string,
+  last_name   string,
+  email       string,
+  last_login  date.time,
+  password    string,
+  phone       string,
+  username    string,
+  trips       []trip
+}
+
+
+Trip {
+  pk       int `gorm "primary key"`,
+  from      string,
+  to        string,
+  datetime  date.time,
+  users  []user,
+}
