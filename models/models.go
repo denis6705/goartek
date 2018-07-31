@@ -1,4 +1,4 @@
-package goartek
+package models
 
 var (
 	Name string = "Denis"
